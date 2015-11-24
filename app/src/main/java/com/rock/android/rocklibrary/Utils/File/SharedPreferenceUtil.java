@@ -4,19 +4,19 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 
-public class Preference {
+public class SharedPreferenceUtil {
 
     private static final String PREFS_NAME = "Preference";
     private static Context mContext;
 
     private SharedPreferences sharedPreference;
 
-    private static Preference mPreferenceUtil;
+    private static SharedPreferenceUtil mPreferenceUtil;
 
-    public static Preference getInstance(Context context) {
+    public static SharedPreferenceUtil getInstance(Context context) {
         mContext = context;
         if (mPreferenceUtil == null) {
-            mPreferenceUtil = new Preference();
+            mPreferenceUtil = new SharedPreferenceUtil();
         }
 
         return mPreferenceUtil;
